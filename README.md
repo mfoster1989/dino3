@@ -22,4 +22,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # dino3
 
 
-Deployed Link : tired-zinc.surge.sh
+Deployed Link : quizzical-cub.surge.sh
