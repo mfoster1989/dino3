@@ -9,7 +9,7 @@
 </template>
 <script>
     export default {
-        name: "Preview",
+        name: "ThePreview",
         data() {
             return {
                 seen: false
