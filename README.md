@@ -22,4 +22,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # dino3
 
 
-Deployed Link : quizzical-cub.surge.sh
+Deployed Link : https://dino3-99ba4.firebaseapp.com/#/
