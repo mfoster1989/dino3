@@ -1,33 +1,41 @@
 <template>
-  <div class="stuff">
-      <form id="application-input" v-on:submit.prevent method='POST'>
-        <label>Apply Here: </label>
-        <textarea id="application-text" rows="8" cols="100" v-model='application'></textarea>
-        <input id="submit" type="submit" value="Submit" @click.prevent="submitApp"/>
-      </form>
-      <p id="message"> {{message}}</p>
-      <ThePreview v-bind:application="application"></ThePreview>
+  <div id="TheForm">
+    <form>
+      <label>Apply Here: </label>
+      <textarea id="application-text" rows="8" cols="100" v-model="applicationText"></textarea><br />
+      <input id="submit" type="submit" value="Submit" @click.prevent.reset="submitApplication" />
+    </form>
+    <p id="message">{{ message }}</p>
   </div>
 </template>
-<script>
-    import ThePreview from "./ThePreview"
 
+<script>
 export default {
   name: "TheForm",
-  components: {
-    ThePreview
+  props: {
+    getText: {
+      type: Function,
+      required: true
+    }
   },
-  data() {
+  data () {
     return {
-      application: '',
-      message: ''
-      }
-    },
-    methods: {
-      submitApp(){
-      this.message = 'Your application was submitted!'
+      applicationText: "",
+      message: ""
+    }
+  },
+  watch: {
+    applicationText (newText) {
+      this.getText(newText)
+    }
+  },
+  methods: {
+    submitApplication(){
+      this.message = "Your application was submitted!"
     }
   }
-}</script>
+}
+</script>
+
 <style scoped>
 </style>

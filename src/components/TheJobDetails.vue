@@ -1,24 +1,16 @@
 <template>
-  <div id="TheJobDetails">
-      <section id="job-details">
-          <h2>Job Details</h2>
-          <h4>{{listings.title}}</h4>
-          <p>
-              {{listings.description}}
-          </p>
-      </section>
+  <div id="JobDetails">
+    <section id="job-details">
+      <h2>Job Details</h2>
+		</section>
   </div>
 </template>
+
 <script>
-    export default {
-        name: "TheJobDetails",
-        props: {
-            listings: {
-                type: Object,
-                required: true
-            }
-        }
-    }
+export default {
+  name: "TheJobDetails"
+}
 </script>
+
 <style scoped>
 </style>

@@ -1,28 +1,28 @@
 <template>
-  <div id="job-preview">
-      <p id="message">&nbsp;</p>
-      <button id="preview-toggle" @click="seen = !seen">Show Preview</button>
-      <section id="appliction-preview" v-show="seen">
-          {{application}}
-      </section>
-  </div>
+  <section id="application-preview">
+    <p>{{text}}</p>
+  </section>
 </template>
-<script>
-    export default {
-        name: "ThePreview",
-        data() {
-            return {
-                seen: false
-            }
-        },
-        props: {
-            application: {
-                type: String,
-                required: true
-            }
-        }
-    }
-</script>
-<style scoped>
-</style>
 
+<script>
+export default {
+  name: "ThePreview",
+  props: {
+    text: {
+      type: String,
+      required: false
+    }
+  }
+}
+</script>
+
+<style scoped>
+	#application-preview {
+	  border-radius: 6px;
+	  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+	  border: 1px solid darkgrey;
+	  min-height: 100px;
+	  margin-top: 20px;
+	  padding: 10px;
+	}
+</style>
